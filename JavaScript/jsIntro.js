@@ -116,4 +116,27 @@ function profitableGamble(prob, prize, pay) {
 
 
 
-//15.
+//15. Create a function that takes an object argument sizes (contains width, length, height keys) and returns the volume of the box.
+function volumeOfBox(sizes) {
+    return (sizes.height * sizes.width * sizes.length);
+}
+
+
+//16. Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+function divisible(num) {
+    if (num % 100 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+
+//16. Create a function that accepts an array and returns the last item in the array.
+function getLastItem(arr) {
+    return arr.pop();
+}
+
+
+//17.
