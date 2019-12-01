@@ -150,4 +150,15 @@ function search(arr, item) {
     return arr.indexOf(item);
 }
 
+//19. Create a function to concatenate two integer arrays.
+function concat(arr1, arr2) {
+    return arr1.concat(arr2);
+}
 
+
+//20. Create a function that takes an array and returns the first element.
+function getFirstValue(arr) {
+    return arr.shift();
+}
+
+//21.
