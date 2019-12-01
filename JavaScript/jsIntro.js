@@ -139,4 +139,15 @@ function getLastItem(arr) {
 }
 
 
-//17.
+//17. Given two strings, firstName and lastName, return a single string in the format "last, first".
+function concatName(firstName, lastName) {
+    return (lastName + ", " + firstName);
+}
+
+
+//18. Create a function that finds the index of a given item in a sorted array. Input is (arr, item).
+function search(arr, item) {
+    return arr.indexOf(item);
+}
+
+
