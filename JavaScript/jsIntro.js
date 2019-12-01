@@ -161,4 +161,19 @@ function getFirstValue(arr) {
     return arr.shift();
 }
 
-//21.
+//21. Create a function that takes an array and a string as arguments and return the index of the string.
+function find_index(arr, str) {
+    return arr.indexOf(str);
+}
+
+//22. Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers.
+function isEvenOrOdd(num) {
+    if (num % 2 === 0) {
+        return "even";
+    } else {
+        return "odd";
+    }
+}
+
+
+//23.
