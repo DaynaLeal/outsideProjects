@@ -176,4 +176,19 @@ function isEvenOrOdd(num) {
 }
 
 
-//23.
+//23. Create a function that finds the index of a given item.
+function search(arr, item) {
+    return arr.indexOf(item);
+}
+
+
+//24. Create a function that returns true if a string contains any spaces.
+function hasSpaces(str) {
+    if (str.indexOf(" ") > -1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
