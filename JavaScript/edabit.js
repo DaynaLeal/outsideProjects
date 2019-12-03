@@ -191,4 +191,10 @@ function hasSpaces(str) {
     }
 }
 
+//25. Create a function that returns the total number of parameters passed in.
+function numberArgs(arr) {
+    return arguments.length;
+}
 
+
+//26.
