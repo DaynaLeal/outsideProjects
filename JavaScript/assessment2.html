@@ -236,7 +236,11 @@
 
 //mine
 function getLowestNumber(input1, input2, input3){
-    if
+    if(!isNaN(parseInt(input1)) && !isNaN(parseInt(input2)) && !isNaN(parseInt(input3))){
+        return Math.min(input1, input2, input3);
+    } else {
+        return false;
+    }
 }
 
 
@@ -249,12 +253,12 @@ function getLowestNumber(input1, input2, input3){
 //         return Math.min(x, y, z);
 //     } else return false
 // }
-// console.log(getLowestNumber(1, 15, 30)); // 1
-// console.log(getLowestNumber(true, false, true)); // false
-// console.log(getLowestNumber("1", "15", "30")); // 1
-// console.log(getLowestNumber("cat", "dog", "hippopotamus")); // false
-// console.log(getLowestNumber(1, "otter", 30)); // false
-// console.log(getLowestNumber(-53, 72, 7)); // -53
+console.log(getLowestNumber(1, 15, 30)); // 1
+console.log(getLowestNumber(true, false, true)); // false
+console.log(getLowestNumber("1", "15", "30")); // 1
+console.log(getLowestNumber("cat", "dog", "hippopotamus")); // false
+console.log(getLowestNumber(1, "otter", 30)); // false
+console.log(getLowestNumber(-53, 72, 7)); // -53
 </script>
 </body>
 </html>
