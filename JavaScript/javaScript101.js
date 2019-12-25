@@ -1351,13 +1351,22 @@ addToDone("Exercise 80 is correct.")
 // Exercise 81
 // Write a function definition named shortestString that takes in an array of strings and returns the shortest string in the array.
 
-function shortestString(numbersArray){
-    for(var i = 0; i < numbersArray.length; i++){
-        return Math.min(...numbersArray[i].length);
-    }
+function shortestString(stringArray){
 
-    // return Math.min(...numbersArray.length);
-}
+    function minLength(stringArray) {
+        var min = Math.min.apply(Math, stringArray.map(function(str) {
+            return str.length; }));
+
+        return min;
+    };
+
+    for(var i = 0; i < stringArray.length; i++){
+        if(stringArray[i].length === minLength(stringArray)){
+            return stringArray[i];
+        }
+    }
+};
+
 
 assert(shortestString(["kiwi", "mango", "strawberry"]), "kiwi", "Exercise 81");
 assert(shortestString(["hello", "everybody"]), "hello", "Exercise 81");
@@ -1368,6 +1377,22 @@ addToDone("Exercise 81 is correct.")
 // Exercise 82
 // Write a function definition named longestString that takes in sequence of strings and returns the longest string in the array.
 
+function longestString(stringArray){
+
+    function maxLength(stringArray) {
+        var max = Math.max.apply(Math, stringArray.map(function(str) {
+            return str.length; }));
+
+        return max;
+    };
+
+    for(var i = 0; i < stringArray.length; i++){
+        if(stringArray[i].length === maxLength(stringArray)){
+            return stringArray[i];
+        }
+    }
+};
+
 assert(longestString(["kiwi", "mango", "strawberry"]), "strawberry", "Exercise 82");
 assert(longestString(["hello", "everybody"]), "everybody", "Exercise 82");
 assert(longestString(["mary", "had", "a", "little", "lamb"]), "little", "Exercise 82");
@@ -1377,15 +1402,34 @@ addToDone("Exercise 82 is correct.")
 // Exercise 83
 // Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
 
+const distinct =  (value, index, self) => {
+    return self.indexOf(value) === index;
+}
+
+function getUniqueValues(inputArray){
+    var uniqueArray = [];
+    return inputArray.filter(distinct);
+}
+
 assert(getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]), ["ant", "mosquito", "ladybug"], "Exercise 83");
 assert(getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]), ["b", "a", "n", "s"], "Exercise 83");
 assert(getUniqueValues(["mary", "had", "a", "little", "lamb", "little", "lamb", "little", "lamb"]), ["mary", "had", "a", "little", "lamb"], "Exercise 83");
-addToDone("Exercise 83 is correct.")
+addToDone("Exercise 83 is correct.");
 
 
 // Exercise 84
 // Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
 
+function elementsTimesTwo(inputArray){
+    var numberBucket = [];
+
+    inputArray.forEach(function(numberElement){
+        numberElement = (numberElement * 2);
+        numberBucket.push(numberElement);
+    });
+
+    return numberBucket;
+}
 
 assert(elementsTimesTwo([1, 2, 3]), [2, 4, 6], "Exercise 84")
 assert(elementsTimesTwo([0, 0, 0]), [0, 0, 0], "Exercise 84")
