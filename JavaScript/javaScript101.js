@@ -5,8 +5,8 @@ const assert = function(actual, expected, message = "") {
 
     // This compares primitive values and collections. If they differ, throw an error.
     if(JSON.stringify(actual) !== JSON.stringify(expected)) {
-        console.error('[assert] expected:    ' + expected)
-        console.error('[assert] instead got: ' + actual)
+        console.error('[assert] expected:    ' + expected);
+        console.error('[assert] instead got: ' + actual);
         throw Error("Assert failed in " + message);
     }
 };
@@ -77,7 +77,7 @@ addToDone("Exercise 5 is correct");
 // Recommend using the built-in JS operation to add to an array.
 vegetables.push("tomato");
 assert(vegetables,["eggplant", "broccoli", "carrot", "cauliflower", "zucchini", "tomato"], "Exercise 6");
-addToDone("Exercise 6 is correct")
+addToDone("Exercise 6 is correct");
 
 
 // Exercise 7
@@ -85,24 +85,24 @@ addToDone("Exercise 6 is correct")
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 numbers.reverse();
-assert(numbers, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1], "Exercise 7")
-addToDone("Exercise 7 is correct")
+assert(numbers, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1], "Exercise 7");
+addToDone("Exercise 7 is correct");
 
 
 
 // Exercise 8
 // Sort the vegetables in alphabetical order. Recommend finding a way to sort the array with a built-in method
 vegetables.sort();
-assert(vegetables, ['broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'], "Exercise 8")
-addToDone("Exercise 8 is correct.")
+assert(vegetables, ['broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'], "Exercise 8");
+addToDone("Exercise 8 is correct.");
 
 
 
 // Exercise 9
 // Write the code necessary to sort the fruits in reverse alphabetical order
 fruits.reverse(fruits.sort());
-assert(fruits, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana'], "Exercise 9")
-addToDone("Exercise 9 is correct.")
+assert(fruits, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana'], "Exercise 9");
+addToDone("Exercise 9 is correct.");
 
 
 // Exercise 10
@@ -113,8 +113,8 @@ addToDone("Exercise 9 is correct.")
 // var revSortedFruit = fruits.reverse(fruits.sort());
 var fruitsAndVeggies = fruits.concat(vegetables);
 // console.log(fruitsAndVeggies);
-assert(fruitsAndVeggies, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana', 'broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'], "Exercise 10")
-addToDone("Exercise 10 is correct")
+assert(fruitsAndVeggies, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana', 'broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'], "Exercise 10");
+addToDone("Exercise 10 is correct");
 
 // This function generates a random number that is both positive and even
 function randomPositiveEvenNumber() {
@@ -186,9 +186,9 @@ function plusTwo(x) {
     return x + 2;
 }
 
-assert(plusTwo(3), 5, "3 plus 2 is five")
-assert(plusTwo(-2), 0, "-2 plus 2 is zero")
-assert(plusTwo(0), 2, "zero plus 2 is two")
+assert(plusTwo(3), 5, "3 plus 2 is five");
+assert(plusTwo(-2), 0, "-2 plus 2 is zero");
+assert(plusTwo(0), 2, "zero plus 2 is two");
 
 
 
@@ -203,7 +203,7 @@ assert(addOne(2), 3, "Exercise 11");
 assert(addOne(0), 1, "Exercise 11");
 assert(addOne(positiveEvenNumber), positiveEvenNumber + 1, "Exercise 11");
 assert(addOne(negativeOddNumber), negativeOddNumber + 1, "Exercise 11");
-addToDone("Exercise 11 is correct.")
+addToDone("Exercise 11 is correct.");
 
 
 // Exercise 12
@@ -221,7 +221,7 @@ assert(isPositive(positiveOddNumber), true, "Exercise 12");
 assert(isPositive(positiveEvenNumber), true, "Exercise 12");
 assert(isPositive(negativeOddNumber), false, "Exercise 12");
 assert(isPositive(negativeEvenNumber), false, "Exercise 12");
-addToDone("Exercise 12 is correct.")
+addToDone("Exercise 12 is correct.");
 
 
 // Exercise 13
@@ -239,7 +239,7 @@ assert(isNegative(positiveOddNumber), false, "Exercise 13");
 assert(isNegative(positiveEvenNumber), false, "Exercise 13");
 assert(isNegative(negativeOddNumber), true, "Exercise 13");
 assert(isNegative(negativeEvenNumber), true, "Exercise 13");
-addToDone("Exercise 13 is correct.")
+addToDone("Exercise 13 is correct.");
 
 
 // Exercise 14
@@ -255,7 +255,7 @@ assert(isOdd(positiveOddNumber), true, "Exercise 14");
 assert(isOdd(positiveEvenNumber), false, "Exercise 14");
 assert(isOdd(negativeOddNumber), true, "Exercise 14");
 assert(isOdd(negativeEvenNumber), false, "Exercise 14");
-addToDone("Exercise 14 is correct.")
+addToDone("Exercise 14 is correct.");
 
 // Exercise 15
 // Write a function definition named isEven that takes in a number and returns true or false if that number is even.
@@ -271,7 +271,7 @@ assert(isEven(positiveOddNumber), false, "Exercise 15");
 assert(isEven(positiveEvenNumber), true, "Exercise 15");
 assert(isEven(negativeOddNumber), false, "Exercise 15");
 assert(isEven(negativeEvenNumber), true, "Exercise 15");
-addToDone("Exercise 15 is correct.")
+addToDone("Exercise 15 is correct.");
 
 
 // Exercise 16
@@ -285,7 +285,7 @@ assert(identity(positiveOddNumber), positiveOddNumber, "Exercise 16");
 assert(identity(positiveEvenNumber), positiveEvenNumber, "Exercise 16");
 assert(identity(negativeOddNumber), negativeOddNumber, "Exercise 16");
 assert(identity(negativeEvenNumber), negativeEvenNumber, "Exercise 16");
-addToDone("Exercise 16 is correct.")
+addToDone("Exercise 16 is correct.");
 
 
 // Exercise 17
@@ -305,7 +305,7 @@ assert(isPositiveOdd(positiveOddNumber), true, "Exercise 17");
 assert(isPositiveOdd(positiveEvenNumber), false, "Exercise 17");
 assert(isPositiveOdd(negativeOddNumber), false, "Exercise 17");
 assert(isPositiveOdd(negativeEvenNumber), false, "Exercise 17");
-addToDone("Exercise 17 is correct.")
+addToDone("Exercise 17 is correct.");
 
 
 // Exercise 18
@@ -322,7 +322,7 @@ assert(isPositiveEven(positiveOddNumber), false, "Exercise 18");
 assert(isPositiveEven(positiveEvenNumber), true, "Exercise 18");
 assert(isPositiveEven(negativeOddNumber), false, "Exercise 18");
 assert(isPositiveEven(negativeEvenNumber), false, "Exercise 18");
-addToDone("Exercise 18 is correct.")
+addToDone("Exercise 18 is correct.");
 
 
 // Exercise 19
@@ -339,7 +339,7 @@ assert(isNegativeOdd(positiveOddNumber), false, "Exercise 19");
 assert(isNegativeOdd(positiveEvenNumber), false, "Exercise 19");
 assert(isNegativeOdd(negativeOddNumber), true, "Exercise 19");
 assert(isNegativeOdd(negativeEvenNumber), false, "Exercise 19");
-addToDone("Exercise 19 is correct.")
+addToDone("Exercise 19 is correct.");
 
 
 // Exercise 20
@@ -356,7 +356,7 @@ assert(isNegativeEven(positiveOddNumber), false, "Exercise 20");
 assert(isNegativeEven(positiveEvenNumber), false, "Exercise 20");
 assert(isNegativeEven(negativeOddNumber), false, "Exercise 20");
 assert(isNegativeEven(negativeEvenNumber), true, "Exercise 20");
-addToDone("Exercise 20 is correct.")
+addToDone("Exercise 20 is correct.");
 
 
 
@@ -371,7 +371,7 @@ assert(half(positiveOddNumber), positiveOddNumber / 2, "Exercise 21");
 assert(half(positiveEvenNumber), positiveEvenNumber / 2, "Exercise 21");
 assert(half(negativeOddNumber), negativeOddNumber / 2, "Exercise 21");
 assert(half(negativeEvenNumber), negativeEvenNumber / 2, "Exercise 21");
-addToDone("Exercise 21 is correct.")
+addToDone("Exercise 21 is correct.");
 
 
 
@@ -386,7 +386,7 @@ assert(double(positiveOddNumber), positiveOddNumber * 2, "Exercise 22");
 assert(double(positiveEvenNumber), positiveEvenNumber * 2, "Exercise 22");
 assert(double(negativeOddNumber), negativeOddNumber * 2, "Exercise 22");
 assert(double(negativeEvenNumber), negativeEvenNumber * 2, "Exercise 22");
-addToDone("Exercise 22 is correct.")
+addToDone("Exercise 22 is correct.");
 
 
 
@@ -401,7 +401,7 @@ assert(triple(positiveOddNumber), positiveOddNumber * 3, "Exercise 23");
 assert(triple(positiveEvenNumber), positiveEvenNumber * 3, "Exercise 23");
 assert(triple(negativeOddNumber), negativeOddNumber * 3, "Exercise 23");
 assert(triple(negativeEvenNumber), negativeEvenNumber * 3, "Exercise 23");
-addToDone("Exercise 23 is correct.")
+addToDone("Exercise 23 is correct.");
 
 
 
@@ -416,7 +416,7 @@ assert(reverseSign(positiveOddNumber), positiveOddNumber * -1, "Exercise 24");
 assert(reverseSign(positiveEvenNumber), positiveEvenNumber * -1, "Exercise 24");
 assert(reverseSign(negativeOddNumber), negativeOddNumber * -1, "Exercise 24");
 assert(reverseSign(negativeEvenNumber), negativeEvenNumber * -1, "Exercise 24");
-addToDone("Exercise 24 is correct.")
+addToDone("Exercise 24 is correct.");
 
 
 
@@ -431,7 +431,7 @@ assert(absoluteValue(positiveOddNumber), positiveOddNumber, "Exercise 25");
 assert(absoluteValue(positiveEvenNumber), positiveEvenNumber, "Exercise 25");
 assert(absoluteValue(negativeOddNumber), negativeOddNumber * -1, "Exercise 25");
 assert(absoluteValue(negativeEvenNumber), negativeEvenNumber * -1, "Exercise 25");
-addToDone("Exercise 25 is correct.")
+addToDone("Exercise 25 is correct.");
 
 
 
@@ -449,7 +449,7 @@ assert(isMultipleOfThree(15), true, "Exercise 26");
 assert(isMultipleOfThree(9), true, "Exercise 26");
 assert(isMultipleOfThree(4), false, "Exercise 26");
 assert(isMultipleOfThree(10), false, "Exercise 26");
-addToDone("Exercise 26 is correct.")
+addToDone("Exercise 26 is correct.");
 
 
 
@@ -468,7 +468,7 @@ assert(isMultipleOfFive(15), true, "Exercise 27");
 assert(isMultipleOfFive(9), false, "Exercise 27");
 assert(isMultipleOfFive(4), false, "Exercise 27");
 assert(isMultipleOfFive(10), true, "Exercise 27");
-addToDone("Exercise 27 is correct.")
+addToDone("Exercise 27 is correct.");
 
 
 
@@ -486,7 +486,7 @@ assert(isMultipleOfBothThreeAndFive(45), true, "Exercise 28");
 assert(isMultipleOfBothThreeAndFive(3), false, "Exercise 28");
 assert(isMultipleOfBothThreeAndFive(9), false, "Exercise 28");
 assert(isMultipleOfBothThreeAndFive(4), false, "Exercise 28");
-addToDone("Exercise 28 is correct.")
+addToDone("Exercise 28 is correct.");
 
 
 
@@ -500,7 +500,7 @@ assert(square(3), 9, "Exercise 29");
 assert(square(2), 4, "Exercise 29");
 assert(square(9), 81, "Exercise 29");
 assert(square(positiveOddNumber), positiveOddNumber * positiveOddNumber, "Exercise 29");
-addToDone("Exercise 29 is correct.")
+addToDone("Exercise 29 is correct.");
 
 
 
@@ -513,7 +513,7 @@ function add(a, b) {
 assert(add(3, 2), 5, "Exercise 30");
 assert(add(10, -2), 8, "Exercise 30");
 assert(add(5, 7), 12, "Exercise 30");
-addToDone("Exercise 30 is correct.")
+addToDone("Exercise 30 is correct.");
 
 
 
@@ -526,7 +526,7 @@ assert(cube(3), 27, "Exercise 31");
 assert(cube(2), 8, "Exercise 31");
 assert(cube(5), 125, "Exercise 31");
 assert(cube(positiveOddNumber), positiveOddNumber * positiveOddNumber * positiveOddNumber, "Exercise 31");
-addToDone("Exercise 31 is correct.")
+addToDone("Exercise 31 is correct.");
 
 
 
@@ -539,7 +539,7 @@ function squareRoot(x) {
 assert(squareRoot(4), 2.0, "Exercise 32");
 assert(squareRoot(64), 8.0, "Exercise 32");
 assert(squareRoot(81), 9.0, "Exercise 32");
-addToDone("Exercise 32 is correct.")
+addToDone("Exercise 32 is correct.");
 
 
 
@@ -553,7 +553,7 @@ function subtract(a, b) {
 assert(subtract(8, 6), 2, "Exercise 33");
 assert(subtract(27, 4), 23, "Exercise 33");
 assert(subtract(12, 2), 10, "Exercise 33");
-addToDone("Exercise 33 is correct.")
+addToDone("Exercise 33 is correct.");
 
 
 
@@ -565,7 +565,7 @@ function multiply(a, b) {
 assert(multiply(2, 1), 2, "Exercise 34");
 assert(multiply(3, 5), 15, "Exercise 34");
 assert(multiply(5, 2), 10, "Exercise 34");
-addToDone("Exercise 34 is correct.")
+addToDone("Exercise 34 is correct.");
 
 
 
@@ -579,7 +579,7 @@ assert(divide(27, 9), 3, "Exercise 35");
 assert(divide(15, 3), 5, "Exercise 35");
 assert(divide(5, 2), 2.5, "Exercise 35");
 assert(divide(10, 2), 5, "Exercise 35");
-addToDone("Exercise 35 is correct.")
+addToDone("Exercise 35 is correct.");
 
 
 // Exercise 36
@@ -590,7 +590,7 @@ function quotient(a, b) {
 assert(quotient(27, 9), 3, "Exercise 36");
 assert(quotient(5, 2), 2, "Exercise 36");
 assert(quotient(10, 3), 3, "Exercise 36");
-addToDone("Exercise 36 is correct.")
+addToDone("Exercise 36 is correct.");
 
 
 // Exercise 37
@@ -601,7 +601,7 @@ function remainder(a, b) {
 assert(remainder(3, 3), 0, "Exercise 37");
 assert(remainder(5, 2), 1, "Exercise 37");
 assert(remainder(7, 5), 2, "Exercise 37");
-addToDone("Exercise 37 is correct.")
+addToDone("Exercise 37 is correct.");
 
 
 
@@ -613,7 +613,7 @@ function sumOfSquares(a, b) {
 assert(sumOfSquares(3, 2), 13, "Exercise 38");
 assert(sumOfSquares(5, 2), 29, "Exercise 38");
 assert(sumOfSquares(2, 4), 20, "Exercise 38");
-addToDone("Exercise 38 is correct.")
+addToDone("Exercise 38 is correct.");
 
 
 
@@ -627,7 +627,7 @@ assert(timesTwoPlusThree(1), 5, "Exercise 39");
 assert(timesTwoPlusThree(2), 7, "Exercise 39");
 assert(timesTwoPlusThree(3), 9, "Exercise 39");
 assert(timesTwoPlusThree(5), 13, "Exercise 39");
-addToDone("Exercise 39 is correct.")
+addToDone("Exercise 39 is correct.");
 
 
 // Exercise 40
@@ -639,7 +639,7 @@ assert(areaOfRectangle(1, 3), 3, "Exercise 40");
 assert(areaOfRectangle(5, 2), 10, "Exercise 40");
 assert(areaOfRectangle(2, 7), 14, "Exercise 40");
 assert(areaOfRectangle(5.3, 10.3), 54.59, "Exercise 40");
-addToDone("Exercise 40 is correct.")
+addToDone("Exercise 40 is correct.");
 
 
 
@@ -653,7 +653,7 @@ function areaOfCircle(r){
 assert(areaOfCircle(3), 28.274333882308138, "Exercise 41");
 assert(areaOfCircle(5), 78.53981633974483, "Exercise 41");
 assert(areaOfCircle(7), 153.93804002589985, "Exercise 41");
-addToDone("Exercise 41 is correct.")
+addToDone("Exercise 41 is correct.");
 
 
 // Exercise 42
@@ -665,7 +665,7 @@ function circumference(r) {
 assert(circumference(3), 18.84955592153876, "Exercise 42");
 assert(circumference(5), 31.41592653589793, "Exercise 42");
 assert(circumference(7), 43.982297150257104, "Exercise 42");
-addToDone("Exercise 42 is correct.")
+addToDone("Exercise 42 is correct.");
 
 
 
@@ -696,7 +696,7 @@ assert(isVowel("U"), true, "Exercise 43");
 assert(isVowel("banana"), false, "Exercise 43");
 assert(isVowel("Q"), false, "Exercise 43");
 assert(isVowel("y"), false, "Exercise 43");
-addToDone("Exercise 43 is correct.")
+addToDone("Exercise 43 is correct.");
 
 
 // Exercise 44
@@ -716,7 +716,7 @@ assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
 assert(hasVowels("QQQQ"), false, "Exercise 44");
 assert(hasVowels("wyrd"), false, "Exercise 44");
-addToDone("Exercise 44 is correct.")
+addToDone("Exercise 44 is correct.");
 
 
 // Exercise 45
@@ -737,7 +737,7 @@ assert(countVowels("ubuntu"), 3, "Exercise 45");
 assert(countVowels("mango"), 2, "Exercise 45");
 assert(countVowels("QQQQ"), 0, "Exercise 45");
 assert(countVowels("wyrd"), 0, "Exercise 45");
-addToDone("Exercise 45 is correct.")
+addToDone("Exercise 45 is correct.");
 
 
 // Exercise 46
@@ -751,7 +751,7 @@ assert(removeVowels("banana"), "bnn", "Exercise 46");
 assert(removeVowels("ubuntu"), "bnt", "Exercise 46");
 assert(removeVowels("mango"), "mng", "Exercise 46");
 assert(removeVowels("QQQQ"), "QQQQ", "Exercise 46");
-addToDone("Exercise 46 is correct.")
+addToDone("Exercise 46 is correct.");
 
 
 // Exercise 47
@@ -765,7 +765,7 @@ function startsWithVowel(string) {
 assert(startsWithVowel("ubuntu"), true, "Exercise 47");
 assert(startsWithVowel("banana"), false, "Exercise 47");
 assert(startsWithVowel("mango"), false, "Exercise 47");
-addToDone("Exercise 47 is correct.")
+addToDone("Exercise 47 is correct.");
 
 
 // Exercise 48
@@ -780,7 +780,7 @@ assert(endsWithVowel("ubuntu"), true, "Exercise 48");
 assert(endsWithVowel("banana"), true, "Exercise 48");
 assert(endsWithVowel("mango"), true, "Exercise 48");
 assert(endsWithVowel("spinach"), false, "Exercise 48");
-addToDone("Exercise 48 is correct.")
+addToDone("Exercise 48 is correct.");
 
 
 // Exercise 49
@@ -793,7 +793,7 @@ function startsAndEndsWithVowel(string) {
 assert(startsAndEndsWithVowel("ubuntu"), true, "Exercise 49");
 assert(startsAndEndsWithVowel("banana"), false, "Exercise 49");
 assert(startsAndEndsWithVowel("mango"), false, "Exercise 49");
-addToDone("Exercise 49 is correct.")
+addToDone("Exercise 49 is correct.");
 
 
 // Exercise 50
@@ -806,7 +806,7 @@ function first(sequence) {
 assert(first("ubuntu"), "u", "Exercise 50");
 assert(first([1, 2, 3]), 1, "Exercise 50");
 assert(first(["JS", "is", "awesome"]), "JS", "Exercise 50");
-addToDone("Exercise 50 is correct.")
+addToDone("Exercise 50 is correct.");
 
 
 
@@ -821,7 +821,7 @@ function second(inputSequence){
 assert(second("ubuntu"), "b", "Exercise 51");
 assert(second([1, 2, 3]), 2, "Exercise 51");
 assert(second(["JS", "is", "awesome"]), "is", "Exercise 51");
-addToDone("Exercise 51 is correct.")
+addToDone("Exercise 51 is correct.");
 
 
 // Exercise 52
@@ -834,7 +834,7 @@ function third(inputSequence){
 assert(third("ubuntu"), "u", "Exercise 52");
 assert(third([1, 2, 3]), 3, "Exercise 52");
 assert(third(["JS", "is", "awesome"]), "awesome", "Exercise 52");
-addToDone("Exercise 52 is correct.")
+addToDone("Exercise 52 is correct.");
 
 
 // Exercise 53
@@ -847,7 +847,7 @@ function forth(inputSequence){
 assert(forth("ubuntu"), "n", "Exercise 53");
 assert(forth([1, 2, 3, 4]), 4, "Exercise 53");
 assert(forth(["JS", "is", "awesome", "right?"]), "right?", "Exercise 53");
-addToDone("Exercise 53 is correct.")
+addToDone("Exercise 53 is correct.");
 
 
 // Exercise 54
@@ -861,7 +861,7 @@ assert(last("ubuntu"), "u", "Exercise 54");
 assert(last([1, 2, 3, 4]), 4, "Exercise 54");
 assert(last(["JS", "is", "awesome"]), "awesome", "Exercise 54");
 assert(last(["kiwi", "mango", "guava"]), "guava", "Exercise 54");
-addToDone("Exercise 54 is correct.")
+addToDone("Exercise 54 is correct.");
 
 
 // Exercise 55
@@ -876,7 +876,7 @@ assert(secondToLast("ubuntu"), "t", "Exercise 55");
 assert(secondToLast([1, 2, 3, 4]), 3, "Exercise 55");
 assert(secondToLast(["JS", "is", "awesome"]), "is", "Exercise 55");
 assert(secondToLast(["kiwi", "mango", "guava"]), "mango", "Exercise 55");
-addToDone("Exercise 55 is correct.")
+addToDone("Exercise 55 is correct.");
 
 
 // Exercise 56
@@ -890,7 +890,7 @@ assert(thirdToLast("ubuntu"), "n", "Exercise 56");
 assert(thirdToLast([1, 2, 3, 4]), 2, "Exercise 56");
 assert(thirdToLast(["JS", "is", "awesome"]), "JS", "Exercise 56");
 assert(thirdToLast(["strawberry", "kiwi", "mango", "guava"]), "kiwi", "Exercise 56");
-addToDone("Exercise 56 is correct.")
+addToDone("Exercise 56 is correct.");
 
 
 // Exercise 57
@@ -907,7 +907,7 @@ function firstAndSecond(inputSequence){
 assert(firstAndSecond([1, 2, 3, 4]), [1, 2], "Exercise 57");
 assert(firstAndSecond(["JS", "is", "awesome"]), ["JS", "is"], "Exercise 57");
 assert(firstAndSecond(["strawberry", "kiwi", "mango", "guava"]), ["strawberry", "kiwi"], "Exercise 57");
-addToDone("Exercise 57 is correct.")
+addToDone("Exercise 57 is correct.");
 
 
 // Exercise 58
@@ -924,7 +924,7 @@ function firstAndLast(inputSequence){
 assert(firstAndLast([1, 2, 3, 4]), [1, 4], "Exercise 58");
 assert(firstAndLast(["JS", "is", "awesome"]), ["JS", "awesome"], "Exercise 58");
 assert(firstAndLast(["strawberry", "kiwi", "mango", "guava"]), ["strawberry", "guava"], "Exercise 58");
-addToDone("Exercise 58 is correct.")
+addToDone("Exercise 58 is correct.");
 
 
 
@@ -944,7 +944,7 @@ function firstToLast(inputSequence){
 assert(firstToLast([1, 2, 3, 4]), [2, 3, 4, 1], "Exercise 59");
 assert(firstToLast(["JS", "is", "awesome"]), ["is", "awesome", "JS"], "Exercise 59");
 assert(firstToLast(["strawberry", "kiwi", "mango", "guava"]), ["kiwi", "mango", "guava", "strawberry"], "Exercise 59");
-addToDone("Exercise 59 is correct.")
+addToDone("Exercise 59 is correct.");
 
 
 
@@ -962,7 +962,7 @@ function sumAll(inputArray){
 assert(sumAll([1, 2, 3, 4]), 10, "Exercise 60");
 assert(sumAll([3, 3, 3]), 9, "Exercise 60");
 assert(sumAll([0, 5, 6]), 11, "Exercise 60");
-addToDone("Exercise 60 is correct.")
+addToDone("Exercise 60 is correct.");
 
 
 
@@ -981,7 +981,7 @@ function mean(numberArray){
 assert(mean([1, 2, 3, 4]), 2.5, "Exercise 61");
 assert(mean([3, 3, 3]), 3, "Exercise 61");
 assert(mean([1, 5, 6]), 4, "Exercise 61");
-addToDone("Exercise 61 is correct.")
+addToDone("Exercise 61 is correct.");
 
 
 
@@ -1006,7 +1006,7 @@ assert(median([1, 2, 3, 4, 5]), 3.0, "Exercise 62");
 assert(median([1, 2, 3]), 2.0, "Exercise 62");
 assert(median([1, 5, 6]), 5.0, "Exercise 62");
 assert(median([1, 2, 5, 6]), 3.5, "Exercise 62");
-addToDone("Exercise 62 is correct.")
+addToDone("Exercise 62 is correct.");
 
 
 // Exercise 63
@@ -1020,7 +1020,7 @@ function maxMinusMin(numberArray){
 assert(maxMinusMin([1, 2, 2, 8, 3, 4]), 7, "Exercise 63");
 assert(maxMinusMin([1, 1, 2, 3, 9]), 8, "Exercise 63");
 assert(maxMinusMin([2, 2, 3, 3, 3, 7]), 5, "Exercise 63");
-addToDone("Exercise 63 is correct.")
+addToDone("Exercise 63 is correct.");
 
 
 // Exercise 64
@@ -1038,7 +1038,7 @@ function productOfAll(numbersArray){
 assert(productOfAll([1, 2, 3]), 6, "Exercise 64");
 assert(productOfAll([3, 4, 5]), 60, "Exercise 64");
 assert(productOfAll([2, 2, 3, 0]), 0, "Exercise 64");
-addToDone("Exercise 64 is correct.")
+addToDone("Exercise 64 is correct.");
 
 
 // Exercise 65
@@ -1051,7 +1051,7 @@ function getHighestNumber(numbersArray){
 assert(getHighestNumber([1, 2, 3]), 3, "Exercise 65");
 assert(getHighestNumber([1, 5, 2, 3, 4]), 5, "Exercise 65");
 assert(getHighestNumber([5, 1, 2, 4, 9]), 9, "Exercise 65");
-addToDone("Exercise 65 is correct.")
+addToDone("Exercise 65 is correct.");
 
 
 // Exercise 66
@@ -1064,7 +1064,7 @@ function getSmallestNumber(numbersArray){
 assert(getSmallestNumber([1, 2, 3]), 1, "Exercise 66");
 assert(getSmallestNumber([3, 5, 9, 8, 1]), 1, "Exercise 66");
 assert(getSmallestNumber([8, 9, 4, 5, 7]), 4, "Exercise 66");
-addToDone("Exercise 66 is correct.")
+addToDone("Exercise 66 is correct.");
 
 
 // Exercise 67
@@ -1084,7 +1084,7 @@ function onlyOddNumbers(numbersArray){
 assert(onlyOddNumbers([1, 2, 3]), [1, 3], "Exercise 67");
 assert(onlyOddNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -3, -1, 1, 3, 5], "Exercise 67");
 assert(onlyOddNumbers([-4, -3, 1]), [-3, 1], "Exercise 67");
-addToDone("Exercise 67 is correct.")
+addToDone("Exercise 67 is correct.");
 
 
 // Exercise 68
@@ -1104,7 +1104,7 @@ function onlyEvenNumbers(numbersArray){
 assert(onlyEvenNumbers([1, 2, 3]), [2], "Exercise 68");
 assert(onlyEvenNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-4, -2, 2, 4], "Exercise 68");
 assert(onlyEvenNumbers([-4, -3, 1]), [-4], "Exercise 68");
-addToDone("Exercise 68 is correct.")
+addToDone("Exercise 68 is correct.");
 
 
 // Exercise 69
@@ -1124,7 +1124,7 @@ function onlyPositiveNumbers(numbersArray){
 assert(onlyPositiveNumbers([1, 2, 3]), [1, 2, 3], "Exercise 69");
 assert(onlyPositiveNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [1, 2, 3, 4, 5], "Exercise 69");
 assert(onlyPositiveNumbers([-4, -3, 1]), [1], "Exercise 69");
-addToDone("Exercise 69 is correct.")
+addToDone("Exercise 69 is correct.");
 
 
 // Exercise 70
@@ -1183,7 +1183,7 @@ assert(countEvens([1, 2, 3]), 1, "Exercise 72");
 assert(countEvens([2, 5, 6]), 2, "Exercise 72");
 assert(countEvens([3, 3, 3]), 0, "Exercise 72");
 assert(countEvens([5, 6, 7, 8] ), 2, "Exercise 72");
-addToDone("Exercise 72 is correct.")
+addToDone("Exercise 72 is correct.");
 
 
 // Exercise 73
@@ -1199,7 +1199,7 @@ assert(hasOdds([1, 2, 3]), true, "Exercise 73");
 assert(hasOdds([2, 5, 6]), true, "Exercise 73");
 assert(hasOdds([3, 3, 3]), true, "Exercise 73");
 assert(hasOdds([2, 4, 6]), false, "Exercise 73");
-addToDone("Exercise 73 is correct.")
+addToDone("Exercise 73 is correct.");
 
 
 // Exercise 74
@@ -1220,7 +1220,7 @@ assert(countOdds([1, 2, 3]), 2, "Exercise 74");
 assert(countOdds([2, 5, 6]), 1, "Exercise 74");
 assert(countOdds([3, 3, 3]), 3, "Exercise 74");
 assert(countOdds([2, 4, 6]), 0, "Exercise 74");
-addToDone("Exercise 74 is correct.")
+addToDone("Exercise 74 is correct.");
 
 
 // Exercise 75
@@ -1240,7 +1240,7 @@ function countNegatives(numbersArray){
 assert(countNegatives([1, -2, 3]), 1, "Exercise 75");
 assert(countNegatives([2, -5, -6]), 2, "Exercise 75");
 assert(countNegatives([3, 3, 3]), 0, "Exercise 75");
-addToDone("Exercise 75 is correct.")
+addToDone("Exercise 75 is correct.");
 
 
 // Exercise 76
@@ -1252,7 +1252,7 @@ function countPositives(numbersArray){
     for(var i = 0; i < numbersArray.length; i++){
         if(numbersArray[i] > 0){
             positivesTotal += 1;
-        };
+        }
     }
     return positivesTotal;
 }
@@ -1261,7 +1261,7 @@ assert(countPositives([1, -2, 3]), 2, "Exercise 76");
 assert(countPositives([2, -5, -6]), 1, "Exercise 76");
 assert(countPositives([3, 3, 3]), 3, "Exercise 76");
 assert(countPositives([-2, -1, -5]), 0, "Exercise 76");
-addToDone("Exercise 76 is correct.")
+addToDone("Exercise 76 is correct.");
 
 
 // Exercise 77
@@ -1282,7 +1282,7 @@ assert(onlyPositiveEvens([1, -2, 3]), [], "Exercise 77");
 assert(onlyPositiveEvens([2, -5, -6]), [2], "Exercise 77");
 assert(onlyPositiveEvens([3, 3, 4, 6]), [4, 6], "Exercise 77");
 assert(onlyPositiveEvens([2, 3, 4, -1, -5]), [2, 4], "Exercise 77");
-addToDone("Exercise 77 is correct.")
+addToDone("Exercise 77 is correct.");
 
 
 // Exercise 78
@@ -1303,7 +1303,7 @@ assert(onlyPositiveOdds([1, -2, 3]), [1, 3], "Exercise 78");
 assert(onlyPositiveOdds([2, -5, -6]), [], "Exercise 78");
 assert(onlyPositiveOdds([3, 3, 4, 6]), [3, 3], "Exercise 78");
 assert(onlyPositiveOdds([2, 3, 4, -1, -5]), [3], "Exercise 78");
-addToDone("Exercise 78 is correct.")
+addToDone("Exercise 78 is correct.");
 
 
 // Exercise 79
@@ -1324,7 +1324,7 @@ assert(onlyNegativeEvens([1, -2, 3]), [-2], "Exercise 79");
 assert(onlyNegativeEvens([2, -5, -6]), [-6], "Exercise 79");
 assert(onlyNegativeEvens([3, 3, 4, 6]), [], "Exercise 79");
 assert(onlyNegativeEvens([-2, 3, 4, -1, -4]), [-2, -4], "Exercise 79");
-addToDone("Exercise 79 is correct.")
+addToDone("Exercise 79 is correct.");
 
 
 // Exercise 80
@@ -1345,7 +1345,7 @@ assert(onlyNegativeOdds([1, -2, 3]), [], "Exercise 80");
 assert(onlyNegativeOdds([2, -5, -6]), [-5], "Exercise 80");
 assert(onlyNegativeOdds([3, 3, 4, 6]), [], "Exercise 80");
 assert(onlyNegativeOdds([2, -3, 4, -1, -4]), [-3, -1], "Exercise 80");
-addToDone("Exercise 80 is correct.")
+addToDone("Exercise 80 is correct.");
 
 
 // Exercise 81
@@ -1354,24 +1354,24 @@ addToDone("Exercise 80 is correct.")
 function shortestString(stringArray){
 
     function minLength(stringArray) {
-        var min = Math.min.apply(Math, stringArray.map(function(str) {
+        var minValue = Math.min.apply(Math, stringArray.map(function(str) {
             return str.length; }));
 
-        return min;
-    };
+        return minValue;
+    }
 
     for(var i = 0; i < stringArray.length; i++){
         if(stringArray[i].length === minLength(stringArray)){
             return stringArray[i];
         }
     }
-};
+}
 
 
 assert(shortestString(["kiwi", "mango", "strawberry"]), "kiwi", "Exercise 81");
 assert(shortestString(["hello", "everybody"]), "hello", "Exercise 81");
 assert(shortestString(["mary", "had", "a", "little", "lamb"]), "a", "Exercise 81");
-addToDone("Exercise 81 is correct.")
+addToDone("Exercise 81 is correct.");
 
 
 // Exercise 82
@@ -1380,23 +1380,23 @@ addToDone("Exercise 81 is correct.")
 function longestString(stringArray){
 
     function maxLength(stringArray) {
-        var max = Math.max.apply(Math, stringArray.map(function(str) {
+        var maxValue = Math.max.apply(Math, stringArray.map(function(str) {
             return str.length; }));
 
-        return max;
-    };
+        return maxValue;
+    }
 
     for(var i = 0; i < stringArray.length; i++){
         if(stringArray[i].length === maxLength(stringArray)){
             return stringArray[i];
         }
     }
-};
+}
 
 assert(longestString(["kiwi", "mango", "strawberry"]), "strawberry", "Exercise 82");
 assert(longestString(["hello", "everybody"]), "everybody", "Exercise 82");
 assert(longestString(["mary", "had", "a", "little", "lamb"]), "little", "Exercise 82");
-addToDone("Exercise 82 is correct.")
+addToDone("Exercise 82 is correct.");
 
 
 // Exercise 83
@@ -1404,7 +1404,7 @@ addToDone("Exercise 82 is correct.")
 
 const distinct =  (value, index, self) => {
     return self.indexOf(value) === index;
-}
+};
 
 function getUniqueValues(inputArray){
     var uniqueArray = [];
@@ -1431,10 +1431,10 @@ function elementsTimesTwo(inputArray){
     return numberBucket;
 }
 
-assert(elementsTimesTwo([1, 2, 3]), [2, 4, 6], "Exercise 84")
-assert(elementsTimesTwo([0, 0, 0]), [0, 0, 0], "Exercise 84")
-assert(elementsTimesTwo([5, 10, 15]), [10, 20, 30], "Exercise 84")
-addToDone("Exercise 84 is correct.")
+assert(elementsTimesTwo([1, 2, 3]), [2, 4, 6], "Exercise 84");
+assert(elementsTimesTwo([0, 0, 0]), [0, 0, 0], "Exercise 84");
+assert(elementsTimesTwo([5, 10, 15]), [10, 20, 30], "Exercise 84");
+addToDone("Exercise 84 is correct.");
 
 
 // Exercise 85
@@ -1448,7 +1448,7 @@ function flatten(arrayArray){
 assert(flatten([[1, 2], [3, 4], [5, 6]]), [1, 2, 3, 4, 5, 6], "Exercise 85");
 assert(flatten([[1, 2, 3], [1, 2, 3], [1, 2, 3]]), [1, 2, 3, 1, 2, 3, 1, 2, 3], "Exercise 85");
 assert(flatten([["tomato", "mango", "kiwi"], ["eggplant", "broccoli"]]), ["tomato", "mango", "kiwi", "eggplant", "broccoli"], "Exercise 85");
-addToDone("Exercise 85 is correct.")
+addToDone("Exercise 85 is correct.");
 
 
 
@@ -1467,7 +1467,7 @@ function addOneToArray(numberArray){
 assert(addOneToArray([1, 2, 3]), [2, 3, 4], "Exercise 86");
 assert(addOneToArray([4, 4, 4]), [5, 5, 5], "Exercise 86");
 assert(addOneToArray([9, 10, 11]), [10, 11, 12], "Exercise 86");
-addToDone("Exercise 86 is correct.")
+addToDone("Exercise 86 is correct.");
 
 
 // Working with JS Objects
@@ -1478,30 +1478,38 @@ const tukeyPaper = {
     "author": "John W. Tukey",
     "link": "https://projecteuclid.org/euclid.aoms/1177704711",
     "year_published": 1962
-}
+};
 
 const thomasPaper = {
     "title": "A mathematical model of glutathione metabolism",
     "author": "Rachel Thomas",
     "link": "https://www.ncbi.nlm.nih.gov/pubmed/18442411",
     "year_published": 2008
-}
+};
 
 
 // Exercise 87
 // Write a function named getPaperTitle that takes in a object and returns the title property
 
+function getPaperTitle(inputObject){
+    return inputObject.title;
+}
+
 assert(getPaperTitle(tukeyPaper), "The Future of Data Analysis", "Exercise 87");
 assert(getPaperTitle(thomasPaper), "A mathematical model of glutathione metabolism", "Exercise 87");
-addToDone("Exercise 87 is correct.")
+addToDone("Exercise 87 is correct.");
 
 
 // Exercise 88
 // Write a function named getYearPublished that takes in an objects and returns the value behind the "year_published" key.
 
+function getYearPublished(inputObject){
+    return inputObject.year_published;
+}
+
 assert(getYearPublished(tukeyPaper), 1962, "Exercise 88");
 assert(getYearPublished(thomasPaper), 2008, "Exercise 88");
-addToDone("Exercise 88 is correct.")
+addToDone("Exercise 88 is correct.");
 
 
 // this code defines a JS object with information about a book.
@@ -1509,22 +1517,29 @@ const book = {
     "title": "Genetic Algorithms and Machine Learning for Programmers",
     "price": 36.99,
     "author": "Frances Buontempo"
-}
+};
 
 // Exercise 89
 // Write a function named getPrice that takes in a object and returns the price
 
+function getPrice(inputObject){
+    return book.price;
+}
+
 assert(getPrice(book), 36.99, "Exercise 89");
-addToDone("Exercise 89 is complete.")
+addToDone("Exercise 89 is complete.");
 
 
 
 // Exercise 90
 // Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
 
+function getBookAuthor(inputObject){
+    return book.author;
+}
 
 assert(getBookAuthor(book), "Frances Buontempo", "Exercise 90");
-addToDone("Exercise 90 is complete.")
+addToDone("Exercise 90 is complete.");
 
 
 // The next exercises work with a arrays of objects.
@@ -1551,29 +1566,51 @@ const books = [
         "author": "Cathy O'Neil",
         "price": 17.44
     }
-]
+];
 
 
 // Exercise 91
 // Write a function named getNumberOfBooks that takes in a array of objects and returns the number of objects in that array.
 
 assert(getNumberOfBooks(books), 4, "Exercise 91");
-addToDone("Exercise 91 is complete.")
+addToDone("Exercise 91 is complete.");
 
-
+function getNumberOfBooks(inputArray){
+    return inputArray.length;
+}
 
 // Exercise 92
 // Write a function named totalOfBookPrices that takes in a array of objects and returns the sum total of all the book prices added together
 
-assert(totalOfBookPrices(books), 122.9, "Exercise 92")
-addToDone("Exercise 92 is complete.")
+function totalOfBookPrices(inputArray){
+    var totalOfPrices = 0;
+
+    inputArray.forEach(function(book){
+        totalOfPrices += book.price;
+    });
+
+    return totalOfPrices;
+}
+
+assert(totalOfBookPrices(books), 122.9, "Exercise 92");
+addToDone("Exercise 92 is complete.");
 
 
 // Exercise 93
 // Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
 
+function getAverageBookPrice(inputArray){
+    var averagePrice = 0;
+
+    for(var i = 0; i < inputArray.length; i++){
+        averagePrice += inputArray[i].price;
+    }
+
+    return averagePrice / inputArray.length;
+}
+
 assert(getAverageBookPrice(books), 30.725, "Exercise 93");
-addToDone("Exercise 93 is complete.")
+addToDone("Exercise 93 is complete.");
 
 
 // Exercise 94
@@ -1586,7 +1623,7 @@ assert(highestPriceBook(books), {
     "author": "Edward Tufte"
 }, "Exercise 94");
 
-addToDone("Exercise 94 is complete")
+addToDone("Exercise 94 is complete");
 
 
 
