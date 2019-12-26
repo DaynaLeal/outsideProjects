@@ -1775,10 +1775,20 @@ addToDone("Exercise 98 is complete.");
 // Write a function named getAverageItemPrice that takes in the shopping cart as an input and returns the average of all the item prices.
 // Hint - This should determine the total price divided by the number of types of items. This does not account for each item type's quantity.\
 
+    function getAverageItemPrice(inputCartObject){
+        var itemCosts = 0;
+        var inputArray = inputCartObject.items;
+        console.log(inputArray);
 
+        for(var i = 0; i < inputArray.length; i++){
+            itemCosts += inputArray[i].price;
+        }
+
+        return itemCosts / inputArray.length;
+    }
 
 assert(getAverageItemPrice(shoppingCart), 2.1420000000000003, "Exercise 99");
-addToDone("Exercise 99 is complete.")
+addToDone("Exercise 99 is complete.");
 
 
 
@@ -1786,8 +1796,23 @@ addToDone("Exercise 99 is complete.")
 // Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quanties times that item's price.
 // Hint: You may need to set an initial total price and total total quantity to zero, then sum up and divide that total price by the total quantity
 
+    function getAverageSpentPerItem(inputCartObject){
+        var itemCosts = 0;
+        var numberItems = 0;
+        var inputArray = inputCartObject.items;
+        console.log(inputArray);
+
+        for(var i = 0; i < inputArray.length; i++){
+            itemCosts += (parseFloat(inputArray[i].price) * inputArray[i].quantity);
+            numberItems += inputArray[i].quantity;
+        }
+        console.log(itemCosts);
+        console.log(numberItems);
+        return itemCosts / numberItems;
+    }
+
 assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
-addToDone("Exercise 100 is complete.")
+addToDone("Exercise 100 is complete.");
 
 
 // Exercise 101
@@ -1796,9 +1821,25 @@ addToDone("Exercise 100 is complete.")
 // Hint: Similarly to how we sometimes begin a function with setting a variable to zero, we need a starting place:
 // Hint: Consider creating a variable that is a object with the keys "price" and "quantity" both set to 0. You can then compare each item's price and quantity total to the one from "most"
 
+    function mostSpentOnItem(inputCartObject){
+        var inputArray = inputCartObject.items;
+        var comparisonObject = {
+            "title": "comparison item",
+            "price": 0,
+            "quantity": 0
+        };
+
+        for(var i = 0; i < inputArray.length; i++){
+            if((inputArray[i].price * inputArray[i].quantity) > (comparisonObject.price * comparisonObject.quantity)){
+                comparisonObject = inputArray[i];
+            }
+        }
+        return comparisonObject;
+    }
+
 assert(mostSpentOnItem(shoppingCart), {
     "title": "chocolate",
     "price": 0.75,
     "quantity": 9
 }, "Exercise 101");
-addToDone("Exercise 101 is complete.")
+addToDone("Exercise 101 is complete.");
