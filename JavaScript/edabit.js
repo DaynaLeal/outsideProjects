@@ -212,14 +212,28 @@ function calculateExponent(num, exp) {
 function minMax(arr) {
     let bucket = [];
     for(let i = 0; i < arr.length; i++){
-        if (arr[i] === Math.min(...arr)){
+        if (arr[i] === Math.min(...arr) && !bucket.includes(arr[i])){
+            console.log(Math.min(...arr));
             bucket.push(arr[i]);
-        } else if (arr[i] === Math.max(...arr)){
+        } else if (arr[i] === Math.max(...arr) && !bucket.includes(arr[i], 1)){
+            console.log(Math.max(...arr));
             bucket.push(arr[i]);
         }
     }
     return bucket;
 }
-console.log(minMax([1, 2, 3, 4, 5]));
+// console.log(minMax([1, 2, 3, 4, 5, 5]));
+// console.log(minMax([0.2345, 0.984]));
+// console.log(minMax([0.984, 0.2345]));
+// console.log(Math.min(0.984, 0.2345));
+//other solutions:
+//function minMax(arr) {
+//   return [Math.min(...arr), Math.max(...arr)];
+// }
+//function minMax(arr) {
+//   arr.sort(function(a, b){return a-b});
+//   return [arr[0], arr[arr.length-1]];
+//
+// }
 
 
