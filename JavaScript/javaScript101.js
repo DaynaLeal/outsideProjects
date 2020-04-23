@@ -1842,4 +1842,4 @@ assert(mostSpentOnItem(shoppingCart), {
     "price": 0.75,
     "quantity": 9
 }, "Exercise 101");
-addToDone("Exercise 101 is complete.");
+addToDone("Exercise 101 is complete.");}
