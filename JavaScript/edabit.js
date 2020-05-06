@@ -236,4 +236,13 @@ function minMax(arr) {
 //
 // }
 
-
+// 2. Broken Bridge: Create a function which validates whether a bridge is safe to walk on (i.e. has no gaps in it to fall through).
+//isSafeBridge("####") ➞ true
+// isSafeBridge("## ####") ➞ false
+// isSafeBridge("#") ➞ true
+function isSafeBridge(s){
+    return s.split(' ').length === 1
+}
+console.log(isSafeBridge("#"));
+console.log(isSafeBridge("## ####"));
+console.log(isSafeBridge("####"));
