@@ -243,6 +243,35 @@ function minMax(arr) {
 function isSafeBridge(s){
     return s.split(' ').length === 1
 }
-console.log(isSafeBridge("#"));
-console.log(isSafeBridge("## ####"));
-console.log(isSafeBridge("####"));
+// console.log(isSafeBridge("#"));
+// console.log(isSafeBridge("## ####"));
+// console.log(isSafeBridge("####"));
+
+//3. Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps.
+// example:
+// largestSwap(27) ➞ false
+// largestSwap(43) ➞ true
+// Hint: If 27 is our input, we should return false because swapping the digits gives us 72, and 72 > 27. On the other hand, swapping 43 gives us 34, and 43 > 34.
+function largestSwap(num) {
+    //long method---------------------
+    // let numToString = num.toString();
+    // console.log(numToString);
+    // let stringToArr = numToString.split('');
+    // // console.log(stringToArr);
+    // let reversed = stringToArr.reverse();
+    // // console.log(reversed);
+    // let joined = reversed.join('');
+    // // console.log(joined);
+    // let newNum = parseInt(joined);
+    // console.log(newNum);
+    // return (num >= newNum);
+
+    //refactored-----------------------
+    let numToString = parseInt(num.toString().split('').reverse().join(''));
+    // console.log(numToString);
+    // console.log(typeof numToString);
+    return (num >= numToString);
+}
+console.log(largestSwap(15));
+console.log(largestSwap(45));
+
