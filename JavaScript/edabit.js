@@ -338,3 +338,97 @@ function monthName(num) {
         }
     }
 }
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+//5. Truthy or Falsy?
+// A value is said to be "truthy" if it evaluates to true in a Boolean context. All values are truthy in JavaScript unless they're one of the following:
+// false
+// null
+// undefined
+// 0
+// NaN
+// ""
+// In JavaScript, an empty object and an empty array are both considered "truthy," but an empty string is considered false when evaluated as a Boolean (this behavior is what we call "falsey").
+// Create a function that takes an argument of any data type and returns 1 if it's truthy and 0 if it's falsy.
+function isTruthy(input) {
+    if (input){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+//6. Remove Null from an Array
+//Create a function to remove all null values from an array.
+//examples:
+//removeNull(["a", null, "b", null]) ➞ ["a", "b"]
+// removeNull([null, null, null, null, null]) ➞ []
+// removeNull([7, 8, null, 9]) ➞ [7, 8, 9]
+function removeNull(arr) {
+    let filtered = arr.filter(i => i !== null);
+    return filtered;
+}
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+//7. Shuffle the Name
+//Create a function that accepts a string (of a person's first and last name) and returns a string with the first and last name swapped.
+// Examples:
+// nameShuffle("Donald Trump") ➞ "Trump Donald"
+// nameShuffle("Rosie O'Donnell") ➞ "O'Donnell Rosie"
+// nameShuffle("Seymour Butts") ➞ "Butts Seymour"
+function nameShuffle(str) {
+    return str.split(" ").reverse().join(" ");
+}
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+//8. Get Word Count
+// Create a function that takes a string and returns the word count. The string will be a sentence.
+// Examples
+// countWords("Just an example here move along") ➞ 6
+// countWords("This is a test") ➞ 4
+// countWords("What an easy task, right") ➞ 5
+function countWords(str) {
+    return str.split(" ").length;
+}
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+//9. FIND THE BUG: CHECKING EVEN NUMBERS
+//Create a function that takes in an array and returns true if all its values are even, and false otherwise.
+// Not a big deal, your friend says. He writes the following code:
+    // function checkAllEven(arr) {
+    //   return arr.every(x % 2 === 0)
+    // }
+// The code above leads to a Reference Error, with x being undefined. Fix the code above so that all tests pass:
+// Examples
+// checkAllEven([1, 2, 3, 4]) ➞ false
+// checkAllEven([2, 4, 6]) ➞ true
+// checkAllEven([5, 6, 8, 10]) ➞ false
+// checkAllEven([-2, 2, -2, 2]) ➞ true
+function checkAllEven(arr) {
+    return arr.every(x => x % 2 === 0)
+}
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+//10. RegEx: Boundary Assertions II
+//You are given an array with random words but your program doesn't accept words that begin with the capital letter "C". Remove the unaccepted words and return the new array.
+// Examples
+// accepted(["Ducks", "Bears",  "Cats"]) ➞ ["Ducks", "Bears"]
+// accepted(["cars", "trucks", "planes"] ➞ ["cars", trucks", "planes"]
+// accepted(["Cans", "Worms", "Bugs", "Cold", "Beans"]) ➞ ["Worms", "Bugs", "Beans"]
+// Notes
+// Use a RegEx boundary assertion in your function.
+
