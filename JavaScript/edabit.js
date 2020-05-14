@@ -431,4 +431,8 @@ function checkAllEven(arr) {
 // accepted(["Cans", "Worms", "Bugs", "Cold", "Beans"]) ➞ ["Worms", "Bugs", "Beans"]
 // Notes
 // Use a RegEx boundary assertion in your function.
-
+function acceptedWords(arr) {
+    // let hasC = /^C/;
+    //let doesntHaveC = /^[^C]/;
+    return arr.filter(i => /^[^C]/.test(i));
+}
