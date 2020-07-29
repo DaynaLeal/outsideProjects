@@ -436,3 +436,28 @@ function acceptedWords(arr) {
     //let doesntHaveC = /^[^C]/;
     return arr.filter(i => /^[^C]/.test(i));
 }
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+// JAVASCRIPT REVIEW EDABIT QUESTIONS 6/28/20
+//-------------------------------------------------------------------------------------------------------------------
+
+function reverse(str) {
+    strToArray = str.split('');
+    // console.log(strToArray);
+    reversed = strToArray.reverse();
+    // console.log(reversed);
+    joined = reversed.join('');
+    // console.log(joined);
+    return joined;
+}
+// reverse("hello");
+// reverse("world");
+
+//REFACTORED
+// function reverse(str) {
+//     return str.split('').reverse().join('');
+// }
+//-------------------------------------------------------------------------------------------------------------------
+
