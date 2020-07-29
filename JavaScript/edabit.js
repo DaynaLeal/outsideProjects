@@ -444,13 +444,11 @@ function acceptedWords(arr) {
 //-------------------------------------------------------------------------------------------------------------------
 
 function reverse(str) {
-    strToArray = str.split('');
+    let strToArray = str.split('');
     // console.log(strToArray);
-    reversed = strToArray.reverse();
+    let reversed = strToArray.reverse();
     // console.log(reversed);
-    joined = reversed.join('');
-    // console.log(joined);
-    return joined;
+    return reversed.join('');
 }
 // reverse("hello");
 // reverse("world");
@@ -460,4 +458,66 @@ function reverse(str) {
 //     return str.split('').reverse().join('');
 // }
 //-------------------------------------------------------------------------------------------------------------------
+
+function countCharacters(arr) {
+    let bucket = 0;
+    if (arr === []){
+        return 0;
+    } else {
+        for (let i = 0; i < arr.length; i++){
+            bucket += arr[i].length
+        }
+    }
+    return bucket;
+}
+
+//REFACTORED
+// function countCharacters(arr) {
+//     return arr.join('').length;
+// }
+//-------------------------------------------------------------------------------------------------------------------
+
+
+/**
+ * @return {string}
+ */
+function Go(num) {
+    let str = '';
+    for(let i = 0; i < num; i++){
+        str += '-';
+    }
+    return str;
+}
+
+//REFACTORED
+// function Go(num) {
+//    return '-'.repeat(num);
+// }
+
+//-------------------------------------------------------------------------------------------------------------------
+
+// function numberSyllables(word) {
+//     let syllablesBucket = 0;
+//     let dash = '-';
+//     for (let i = 0; i < word.length; i++){
+//         console.log(word[i]);
+//         if(word[i] === '-'){
+//             syllablesBucket += 1;
+//             console.log(syllablesBucket)
+//         }
+//     }
+//     return syllablesBucket;
+// }
+
+//REFACTORED
+function numberSyllables(word){
+    let syllables = word.split('-');
+    return syllables.length;
+}
+console.log(numberSyllables("buf-fet")); // ➞ 2
+console.log(numberSyllables("beau-ti-ful")); //  ➞ 3
+console.log(numberSyllables("mon-u-men-tal"));  // ➞ 4
+console.log(numberSyllables("on-o-mat-o-poe-ia")); //  ➞ 6
+//-------------------------------------------------------------------------------------------------------------------
+
 
