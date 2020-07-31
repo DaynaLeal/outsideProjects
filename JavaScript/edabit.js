@@ -520,4 +520,91 @@ console.log(numberSyllables("mon-u-men-tal"));  // ➞ 4
 console.log(numberSyllables("on-o-mat-o-poe-ia")); //  ➞ 6
 //-------------------------------------------------------------------------------------------------------------------
 
+// Destructuring objects
+//with ES6 you can assign the variables in a much more succinct way. Use ES6 object destructuring to assign variables
+// one and two to obj.one and obj.two respectively.
 
+let str = `( {one, two} = { one : 1, two : 2}).toString()`;
+
+//-------------------------------------------------------------------------------------------------------------------
+
+// Create a function that takes an array of numbers. Return the largest number in the array.
+function findLargestNum(arr) {
+    return Math.max(...arr);
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//Create a function that takes an array of strings and returns the words that are exactly four letters.
+function isFourLetters(arr) {
+    bucketArr = [];
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i].length === 4){
+            bucketArr.push(arr[i]);
+        }
+    }
+    return bucketArr;
+}
+
+//REFACTORED
+function isFourLetters (arr) {
+    return arr.filter(x => x.length === 4);
+}
+//-------------------------------------------------------------------------------------------------------------------
+
+//return array of first and last in an array
+function firstLast(arr) {
+    let bucket = [];
+    first = arr[0];
+    last = arr[arr.length - 1];
+    bucket.push(first, last);
+    return bucket;
+}
+
+//REFACTORED
+// function firstLast(arr) {
+//     return [arr.shift(), arr.pop()]
+// }
+
+//REFACTORED
+// function firstLast(arr) {
+//     return [arr[0], arr[arr.length-1]]
+// }
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//In semantic versioning a piece of software can be represented in a format like this example: 6.1.9.
+//Write three separate functions, one to retrieve each element in the semantic versioning specification.
+
+function retrieveMajor(semver) {
+    let arr = semver.split('.');
+    return arr[0];
+}
+
+function retrieveMinor(semver) {
+    let arr = semver.split('.');
+    return arr[1];
+}
+
+function retrievePatch(semver) {
+    let arr = semver.split('.');
+    return arr[2];
+}
+
+// REFACTORED
+// function retrieveMajor(semver) {
+//     return semver.split(".")[0];
+// }
+//
+// function retrieveMinor(semver) {
+//     return semver.split(".")[1];
+// }
+//
+// function retrievePatch(semver) {
+//     return semver.split(".")[2];
+// }
+
+//-------------------------------------------------------------------------------------------------------------------
+
+
+//-------------------------------------------------------------------------------------------------------------------
