@@ -606,5 +606,66 @@ function retrievePatch(semver) {
 
 //-------------------------------------------------------------------------------------------------------------------
 
+function findBob(names) {
+    return names.indexOf('Bob')
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+
+function diffMaxMin(arr) {
+    return Math.max(...arr) - Math.min(...arr);
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+
+function both(n1, n2) {
+    if (n1 === 0 && n2 === 0){
+        return true;
+    } else if (n1 < 0 && n2 < 0){
+        return true;
+    } else if (n1 > 0 && n2 > 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+
+function even(num){
+    return num % 2 === 0;
+}
+function noOdds(arr) {
+    return arr.filter(even)
+}
+
+//REFACTOR
+// function noOdds(arr) {
+//     return arr.filter(function(val){ return val % 2 === 0; })
+// }
+//REFACTOR
+// function noOdds(arr) {
+//     return arr.filter(x => x % 2 === 0);
+// }
+
+//-------------------------------------------------------------------------------------------------------------------
+
+function missingAngle(angle1, angle2) {
+    if ((180 - (angle1 + angle2)) < 90){
+        return 'acute';
+    } else if ((180 - (angle1 + angle2)) === 90){
+        return 'right';
+    } else {
+        return 'obtuse';
+    }
+}
+
+//REFACTORED
+// function missingAngle(angle1, angle2) {
+//     let angle3 = 180 - angle1 - angle2;
+//     if (angle3 < 90) return 'acute';
+//     if (angle3 > 90) return 'obtuse';
+//     return 'right';
+// }
 
 //-------------------------------------------------------------------------------------------------------------------
