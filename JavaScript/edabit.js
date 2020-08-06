@@ -514,10 +514,10 @@ function numberSyllables(word){
     let syllables = word.split('-');
     return syllables.length;
 }
-console.log(numberSyllables("buf-fet")); // ➞ 2
-console.log(numberSyllables("beau-ti-ful")); //  ➞ 3
-console.log(numberSyllables("mon-u-men-tal"));  // ➞ 4
-console.log(numberSyllables("on-o-mat-o-poe-ia")); //  ➞ 6
+// console.log(numberSyllables("buf-fet")); // ➞ 2
+// console.log(numberSyllables("beau-ti-ful")); //  ➞ 3
+// console.log(numberSyllables("mon-u-men-tal"));  // ➞ 4
+// console.log(numberSyllables("on-o-mat-o-poe-ia")); //  ➞ 6
 //-------------------------------------------------------------------------------------------------------------------
 
 // Destructuring objects
@@ -547,9 +547,9 @@ function isFourLetters(arr) {
 }
 
 //REFACTORED
-function isFourLetters (arr) {
-    return arr.filter(x => x.length === 4);
-}
+// function isFourLetters (arr) {
+//     return arr.filter(x => x.length === 4);
+// }
 //-------------------------------------------------------------------------------------------------------------------
 
 //return array of first and last in an array
@@ -675,5 +675,52 @@ function missingAngle(angle1, angle2) {
 // Write a regular expression that matches a string if it contains at least one digit.
 
 let x = /\d/;
+
+//-------------------------------------------------------------------------------------------------------------------
+
+function checkEnding(str1, str2) {
+    return str1.endsWith(str2);
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+
+function additiveInverse(arr) {
+    return arr.map(num => num * (-1));
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+
+function convertCartesian(arr1, arr2) {
+    return arr1.map(function(x, i){ return [x, arr2[i]]; });
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//Create a function that takes two arrays and insert the second array in the middle of the first array.
+
+//this first solution works with arrays that have more than two elements in arr1
+function tuckIn(arr1, arr2) {
+    let halfIndex = arr1.length / 2;
+    // console.log(halfIndex);
+    let firstHalf = arr1.slice(0, halfIndex);
+    // console.log(firstHalf);
+    let secondHalf = arr1.slice(halfIndex);
+    // console.log(secondHalf);
+    firstHalf.push(...arr2);
+    return firstHalf.concat(secondHalf);
+}
+
+// console.log(tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));         // ➞ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(tuckIn([15,150], [45, 75, 35]));                   // ➞ [15, 45, 75, 35, 150]
+// console.log(tuckIn([[1, 2], [5, 6]], [[3, 4]]));              // ➞ [[1, 2], [3, 4], [5, 6]]
+
+//REFACTORED
+//only works if arr1.length = 2
+// function tuckIn(arr1, arr2) {
+//     return [arr1[0], ...arr2, arr1[1]]
+// }
+
+//-------------------------------------------------------------------------------------------------------------------
+
 
 //-------------------------------------------------------------------------------------------------------------------
