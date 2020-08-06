@@ -1,3 +1,8 @@
 .idea/*
 *.iml
 .DS_STORE
+
+pizzaProject.js
+pizzas.json
+pizzaProject.html
+assessment2.html

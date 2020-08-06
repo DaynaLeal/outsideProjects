@@ -641,7 +641,9 @@ function noOdds(arr) {
 
 //REFACTOR
 // function noOdds(arr) {
-//     return arr.filter(function(val){ return val % 2 === 0; })
+//     return arr.filter(function even(num){
+//         return num % 2 === 0;
+//     })
 // }
 //REFACTOR
 // function noOdds(arr) {
@@ -667,5 +669,11 @@ function missingAngle(angle1, angle2) {
 //     if (angle3 > 90) return 'obtuse';
 //     return 'right';
 // }
+
+//-------------------------------------------------------------------------------------------------------------------
+
+// Write a regular expression that matches a string if it contains at least one digit.
+
+let x = /\d/;
 
 //-------------------------------------------------------------------------------------------------------------------
