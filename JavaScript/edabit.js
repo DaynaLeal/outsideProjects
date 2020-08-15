@@ -746,11 +746,35 @@ function transform(arr) {
 
 //-------------------------------------------------------------------------------------------------------------------
 
+function multiplyByLength(arr) {
+    for(let i = 0; i < arr.length; i++){
+        arr[i] *= arr.length;
+    }
+    return arr
+}
+
+//REFACTORED
+// function multiplyByLength(arr) {
+//     return arr.map(x => x * arr.length);
+// }
 
 //-------------------------------------------------------------------------------------------------------------------
 
+function canCapture([yourRook, opponentsRook]) {
+    let myRook = yourRook.split('');
+    let otherRook = opponentsRook.split('');
+    return myRook[0] === otherRook[0] || myRook[1] === otherRook[1];
+}
+
+//REFACTORED
+// function canCapture([yourRook, opponentsRook]) {
+//     return ((yourRook.split('')[0] === opponentsRook.split('')[0]) || yourRook.split('')[1] === opponentsRook.split('')[1]);
+// }
 
 //-------------------------------------------------------------------------------------------------------------------
 
+function existsHigher(arr, n) {
+    return Math.max(...arr) >= n;
+}
 
 //-------------------------------------------------------------------------------------------------------------------
