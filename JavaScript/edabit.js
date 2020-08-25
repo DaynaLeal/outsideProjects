@@ -803,3 +803,59 @@ function removeVowels(str) {
 }
 
 //-------------------------------------------------------------------------------------------------------------------
+
+function countTrue(arr) {
+    let bucket = 0;
+    for(let i = 0; i < arr.length; i++){
+        if (arr[i] === true){
+            bucket += 1;
+        }
+    }
+    return bucket;
+}
+
+// console.log(countTrue([true, false, false, true, false])); // ➞ 2
+// console.log(countTrue([false, false, false, false]));  //➞ 0
+// console.log(countTrue([])); //➞ 0
+
+//-------------------------------------------------------------------------------------------------------------------
+
+class BasicPlan {
+    static canStream = true;
+    static canDownload = true;
+    static numOfDevices = 1;
+    static hasSD = true;
+    static hasHD = false;
+    static hasUHD = false;
+    static price = '$8.99';
+}
+
+// Write the classes for StandardPlan and PremiumPlan here!
+// comments only left as reminders of default values, overrides not commented out
+class StandardPlan extends BasicPlan {
+    //static canStream = true;
+    //static canDownload = true;
+    static numOfDevices = 2;
+    //static hasSD = true;
+    static hasHD = true;
+    static hasUHD = false;
+    static price = '$12.99';
+}
+
+class PremiumPlan extends BasicPlan {
+    //static canStream = true;
+    //static canDownload = true;
+    static numOfDevices = 4;
+    //static hasSD = true;
+    static hasHD = true;
+    static hasUHD = true;
+    static price = '$15.99';
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------------------------
